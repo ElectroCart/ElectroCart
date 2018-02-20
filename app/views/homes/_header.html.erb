@@ -1,0 +1,315 @@
+<div class="navbar-before mobile-hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="navbar-before-sign">Everything You Need is theBox</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav navbar-nav navbar-right navbar-right-no-mar">
+                    <li><a href="#">About Us</a>
+                    </li>
+                    <li><a href="#">Blog</a>
+                    </li>
+                    <li><a href="#">Contact Us</a>
+                    </li>
+                    <li><a href="#">FAQ</a>
+                    </li>
+                    <li><a href="#">Wishlist</a>
+                    </li>
+                    <li><a href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+    <h3 class="widget-title">Member Login</h3>
+    <p>Welcome back, friend. Login to get started</p>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label>Email or Username</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="checkbox">
+            <label>
+                <input class="i-check" type="checkbox" />Remeber Me</label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Sign In" />
+    </form>
+    <div class="gap gap-small"></div>
+    <ul class="list-inline">
+        <li><a href="#nav-account-dialog" class="popup-text">Not Member Yet</a>
+        </li>
+        <li><a href="#nav-pwd-dialog" class="popup-text">Forgot Password?</a>
+        </li>
+    </ul>
+</div>
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-account-dialog">
+    <h3 class="widget-title">Create TheBox Account</h3>
+    <p>Ready to get best offers? Let's get started!</p>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Repeat Password</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="checkbox">
+            <label>
+                <input class="i-check" type="checkbox" />Subscribe to the Newsletter</label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Create Account" />
+    </form>
+    <div class="gap gap-small"></div>
+    <ul class="list-inline">
+        <li><a href="#nav-login-dialog" class="popup-text">Already Memeber</a>
+        </li>
+    </ul>
+</div>
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-pwd-dialog">
+    <h3 class="widget-title">Password Recovery</h3>
+    <p>Enter Your Email and We Will Send the Instructions</p>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label>Your Email</label>
+            <input class="form-control" type="text" />
+        </div>
+        <input class="btn btn-primary" type="submit" value="Recover Password" />
+    </form>
+</div>
+<nav class="navbar navbar-inverse navbar-main navbar-pad">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <%= image_tag("logo-w.png", alt: "Image Alternative text" ) %>
+
+            </a>
+        </div>
+        <div class="rel">
+            <form class="navbar-form navbar-left navbar-main-search navbar-main-search-category" role="search">
+                <select class="navbar-main-search-category-select">
+                    <option>All Departmens</option>
+                    <option>Appilances</option>
+                    <option>Apps & Games</option>
+                    <option>Arts, Crafts & Sewing</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Books</option>
+                    <option>CDs & Vinyl</option>
+                    <option>Cell Phones & Accessories</option>
+                    <option>Clothing, Shoes & Jewelry</option>
+                    <option>&nbsp;&nbsp;&nbsp;Woman</option>
+                    <option>&nbsp;&nbsp;&nbsp;Men</option>
+                    <option>&nbsp;&nbsp;&nbsp;Girls</option>
+                    <option>&nbsp;&nbsp;&nbsp;Baby</option>
+                    <option>Collectibles & Fine Art</option>
+                    <option>Computers</option>
+                    <option>Credit and Payment Cards</option>
+                    <option>Digital Music</option>
+                    <option>Electronics</option>
+                    <option>Gift Cards</option>
+                    <option>Grocery & Gourmet</option>
+                    <option>Health & Personal Care</option>
+                    <option>Home & Kitchen</option>
+                    <option>Industrial & Scientific</option>
+                    <option>Luggage & Travel</option>
+                    <option>Luxury Beauty</option>
+                    <option>Magazine Subscribtions</option>
+                    <option>Movies & TV</option>
+                    <option>Musical Instuments</option>
+                    <option>Office Products</option>
+                    <option>Patio, Lawn & Garden</option>
+                    <option>Pet Supplies</option>
+                    <option>Software</option>
+                    <option>Sports & Outdoors</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Video Games</option>
+                    <option>Wine</option>
+                </select>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Entire Store..." />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <a class="navbar-theme-img" href="#">
+                <%= image_tag("header-feature.png", alt:"Image Alternative text" ) %>
+
+            </a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="collapse navbar-collapse navbar-collapse-no-pad" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-nav-lg">
+                <li class="dropdown yamm-fw"><a href="#">Home<i class="drop-caret" data-toggle="dropdown"></i></a>
+                </li>
+                <li class="dropdown yamm-fw"><a href="#">Brands<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="yamm-content">
+                            <div class="row row-eq-height row-col-border">
+                              <div class="col-md-2">
+                                  <h5>Top Brands</h5>
+                                  <ul class="dropdown-menu-items-list">
+                                      <li><a href="#">Vera Bradley</a>
+                                      </li>
+                                      <li><a href="#">Rolex</a>
+                                      </li>
+                                      <li><a href="#">Nike</a>
+                                      </li>
+                                      <li><a href="#">Michael Kors</a>
+                                      </li>
+                                      <li><a href="#">Coach</a>
+                                      </li>
+                                      <li><a href="#">Adidas</a>
+                                      </li>
+                                      <li><a href="#">Zara</a>
+                                      </li>
+                                      <li><a href="#">Fossil</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="col-md-2">
+                                    <h5>Top Brands</h5>
+                                    <ul class="dropdown-menu-items-list">
+                                        <li><a href="#">Vera Bradley</a>
+                                        </li>
+                                        <li><a href="#">Rolex</a>
+                                        </li>
+                                        <li><a href="#">Nike</a>
+                                        </li>
+                                        <li><a href="#">Michael Kors</a>
+                                        </li>
+                                        <li><a href="#">Coach</a>
+                                        </li>
+                                        <li><a href="#">Adidas</a>
+                                        </li>
+                                        <li><a href="#">Zara</a>
+                                        </li>
+                                        <li><a href="#">Fossil</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                              <div class="col-md-2">
+                                    <h5>Top Brands</h5>
+                                    <ul class="dropdown-menu-items-list">
+                                        <li><a href="#">Vera Bradley</a>
+                                        </li>
+                                        <li><a href="#">Rolex</a>
+                                        </li>
+                                        <li><a href="#">Nike</a>
+                                        </li>
+                                        <li><a href="#">Michael Kors</a>
+                                        </li>
+                                        <li><a href="#">Coach</a>
+                                        </li>
+                                        <li><a href="#">Adidas</a>
+                                        </li>
+                                        <li><a href="#">Zara</a>
+                                        </li>
+                                        <li><a href="#">Fossil</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <%= image_tag("test_cat/18.jpg", class:"dropdown-menu-theme-image", alt: "Image Alternative text") %>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown yamm-fw"><a href="#">Sellers<i class="drop-caret" data-toggle="dropdown"></i></a>
+
+                </li>
+                <li class="dropdown yamm-fw"><a href="#">Live Chat<i class="drop-caret" data-toggle="dropdown"></i></a>
+
+                </li>
+                <li class="dropdown yamm-fw"><a href="#">Contact Us<i class="drop-caret" data-toggle="dropdown"></i></a>
+
+                </li>
+                <li class="dropdown yamm-fw"><a href="#">About us<i class="drop-caret" data-toggle="dropdown"></i></a>
+
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-right-no-mar navbar-nav-lg">
+                <!-- <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
+                </li>  -->
+                <% if user_signed_in? %>
+                  <%= link_to("Log Out", destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to("Sign UP", new_user_registration_path) %>
+                  <%= link_to("Login UP", new_user_session_path) %>
+                <% end %>
+
+                <li class="dropdown"><a href="shopping-cart.html"><span ></span><i class="fa fa-shopping-cart"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-shipping-cart">
+                        <li>
+                            <a class="dropdown-menu-shipping-cart-img" href="#">
+                                <img src="img/cart/1.jpg" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                            <div class="dropdown-menu-shipping-cart-inner">
+                                <p class="dropdown-menu-shipping-cart-price">$89</p>
+                                <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="dropdown-menu-shipping-cart-img" href="#">
+                                <img src="img/cart/2.jpg" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                            <div class="dropdown-menu-shipping-cart-inner">
+                                <p class="dropdown-menu-shipping-cart-price">$21</p>
+                                <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="dropdown-menu-shipping-cart-img" href="#">
+                                <img src="img/cart/3.jpg" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                            <div class="dropdown-menu-shipping-cart-inner">
+                                <p class="dropdown-menu-shipping-cart-price">$95</p>
+                                <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="dropdown-menu-shipping-cart-img" href="#">
+                                <img src="img/cart/4.jpg" alt="Image Alternative text" title="Image Title" />
+                            </a>
+                            <div class="dropdown-menu-shipping-cart-inner">
+                                <p class="dropdown-menu-shipping-cart-price">$26</p>
+                                <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="dropdown-menu-shipping-cart-total">Total: $150</p>
+                            <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
