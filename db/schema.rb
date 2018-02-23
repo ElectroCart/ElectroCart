@@ -10,7 +10,83 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219074421) do
+ActiveRecord::Schema.define(version: 20180223115718) do
+
+  create_table "brand_categories", force: :cascade do |t|
+    t.integer "brand_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id", "category_id"], name: "index_brand_categories_on_brand_id_and_category_id"
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "brand_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "laptop_details", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "processor"
+    t.string "hard_drive"
+    t.string "ram"
+    t.string "display"
+    t.string "usb_ports"
+    t.string "color"
+    t.string "shipping_weight"
+    t.integer "brand_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_laptop_details_on_brand_id"
+    t.index ["category_id"], name: "index_laptop_details_on_category_id"
+  end
+
+  create_table "mobile_details", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.string "description"
+    t.string "display"
+    t.string "front_cam"
+    t.string "back_cam"
+    t.string "connectivity"
+    t.string "color"
+    t.string "memory"
+    t.string "platform"
+    t.string "operating_system"
+    t.string "shipping_weight"
+    t.integer "category_id"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_mobile_details_on_brand_id"
+    t.index ["category_id"], name: "index_mobile_details_on_category_id"
+  end
+
+  create_table "tv_details", force: :cascade do |t|
+    t.string "name"
+    t.string "display"
+    t.string "screen_type"
+    t.string "usb_supported"
+    t.string "color"
+    t.string "description"
+    t.string "shipping_weight"
+    t.string "connectivity"
+    t.integer "brand_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_tv_details_on_brand_id"
+    t.index ["category_id"], name: "index_tv_details_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +99,13 @@ ActiveRecord::Schema.define(version: 20180219074421) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
