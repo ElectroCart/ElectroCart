@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223115718) do
+ActiveRecord::Schema.define(version: 20180227083708) do
 
   create_table "brand_categories", force: :cascade do |t|
     t.integer "brand_id"
@@ -32,60 +32,30 @@ ActiveRecord::Schema.define(version: 20180223115718) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "laptop_details", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "processor"
-    t.string "hard_drive"
-    t.string "ram"
-    t.string "display"
-    t.string "usb_ports"
-    t.string "color"
-    t.string "shipping_weight"
-    t.integer "brand_id"
-    t.integer "category_id"
+  create_table "contents", force: :cascade do |t|
+    t.string "c_name"
+    t.integer "feature_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id"], name: "index_laptop_details_on_brand_id"
-    t.index ["category_id"], name: "index_laptop_details_on_category_id"
+    t.index ["feature_id"], name: "index_contents_on_feature_id"
   end
 
-  create_table "mobile_details", force: :cascade do |t|
-    t.string "name"
+  create_table "features", force: :cascade do |t|
+    t.string "f_name"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_features_on_product_id"
+  end
+
+  create_table "products", force: :cascade do |t|
     t.float "price"
-    t.string "description"
-    t.string "display"
-    t.string "front_cam"
-    t.string "back_cam"
-    t.string "connectivity"
-    t.string "color"
-    t.string "memory"
-    t.string "platform"
-    t.string "operating_system"
-    t.string "shipping_weight"
-    t.integer "category_id"
-    t.integer "brand_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["brand_id"], name: "index_mobile_details_on_brand_id"
-    t.index ["category_id"], name: "index_mobile_details_on_category_id"
-  end
-
-  create_table "tv_details", force: :cascade do |t|
-    t.string "name"
-    t.string "display"
-    t.string "screen_type"
-    t.string "usb_supported"
-    t.string "color"
-    t.string "description"
-    t.string "shipping_weight"
-    t.string "connectivity"
-    t.integer "brand_id"
+    t.string "title"
+    t.text "description"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id"], name: "index_tv_details_on_brand_id"
-    t.index ["category_id"], name: "index_tv_details_on_category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
