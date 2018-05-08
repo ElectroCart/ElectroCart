@@ -6,6 +6,13 @@
             </div>
             <div class="col-md-6">
                 <ul class="nav navbar-nav navbar-right navbar-right-no-mar">
+                  <% if seller_signed_in? %>
+                    <li><%= link_to("Logout" , destroy_seller_session_path, :method => :delete)%></a>
+                    </li>
+                  <% else %>
+                    <li><%= link_to("Seller Account" , new_seller_session_path)%></a>
+                    </li>
+                  <% end %>
                     <li><a href="#">About Us</a>
                     </li>
                     <li><a href="#">Blog</a>
@@ -252,7 +259,7 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-right-no-mar navbar-nav-lg">
-                 
+
                  <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text"><span >Hello, Sign in</span>Your Account</a>
                 </li>
                 <% if user_signed_in? %>

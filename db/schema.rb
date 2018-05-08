@@ -10,14 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227083708) do
+ActiveRecord::Schema.define(version: 20180424151355) do
 
-  create_table "brand_categories", force: :cascade do |t|
-    t.integer "brand_id"
-    t.integer "category_id"
+  create_table "acs", force: :cascade do |t|
+    t.string "title"
+    t.string "model_no"
+    t.text "description"
+    t.string "capacity"
+    t.float "price"
+    t.string "weight"
+    t.string "color"
+    t.integer "brands_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["brand_id", "category_id"], name: "index_brand_categories_on_brand_id_and_category_id"
+    t.index ["brands_id"], name: "index_acs_on_brands_id"
   end
 
   create_table "brands", force: :cascade do |t|
@@ -26,36 +32,128 @@ ActiveRecord::Schema.define(version: 20180227083708) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "category_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contents", force: :cascade do |t|
-    t.string "c_name"
-    t.integer "feature_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["feature_id"], name: "index_contents_on_feature_id"
-  end
-
-  create_table "features", force: :cascade do |t|
-    t.string "f_name"
-    t.integer "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_features_on_product_id"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.float "price"
+  create_table "cameras", force: :cascade do |t|
     t.string "title"
+    t.string "resolution"
+    t.string "model_no"
+    t.string "storage_type"
+    t.string "mega_pixel"
+    t.string "display_size"
+    t.string "battery"
     t.text "description"
-    t.integer "category_id"
+    t.string "weight"
+    t.float "price"
+    t.integer "brands_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["brands_id"], name: "index_cameras_on_brands_id"
+  end
+
+  create_table "fridges", force: :cascade do |t|
+    t.string "title"
+    t.string "model_no"
+    t.float "price"
+    t.text "description"
+    t.string "power"
+    t.string "capacity"
+    t.string "voltage"
+    t.integer "brands_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brands_id"], name: "index_fridges_on_brands_id"
+  end
+
+  create_table "laptop_details", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.string "processor"
+    t.string "hard_drive"
+    t.string "ram"
+    t.string "display"
+    t.string "usb_ports"
+    t.string "color"
+    t.string "shipping_weight"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_laptop_details_on_brand_id"
+  end
+
+  create_table "microwaves", force: :cascade do |t|
+    t.string "title"
+    t.string "model_no"
+    t.string "color"
+    t.text "description"
+    t.float "price"
+    t.string "capacity"
+    t.string "power"
+    t.string "weight"
+    t.integer "brands_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brands_id"], name: "index_microwaves_on_brands_id"
+  end
+
+  create_table "mobile_details", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.text "description"
+    t.string "display"
+    t.string "front_cam"
+    t.string "back_cam"
+    t.string "connectivity"
+    t.string "color"
+    t.string "memory"
+    t.string "platform"
+    t.string "operating_system"
+    t.string "shipping_weight"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_mobile_details_on_brand_id"
+  end
+
+  create_table "sellers", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "primary_cell"
+    t.string "secondary_cell"
+    t.string "residential_address"
+    t.string "shop_address"
+    t.string "gender"
+    t.date "DOB"
+    t.boolean "approve", default: false
+    t.index ["email"], name: "index_sellers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_sellers_on_reset_password_token", unique: true
+  end
+
+  create_table "tv_details", force: :cascade do |t|
+    t.string "name"
+    t.string "display"
+    t.string "screen_type"
+    t.string "usb_supported"
+    t.string "color"
+    t.float "price"
+    t.text "description"
+    t.string "shipping_weight"
+    t.string "connectivity"
+    t.integer "brand_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_tv_details_on_brand_id"
   end
 
   create_table "users", force: :cascade do |t|

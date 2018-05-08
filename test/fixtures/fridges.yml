@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  model_no: MyString
+  price: 1.5
+  description: MyText
+  power: MyString
+  capacity: MyString
+  voltage: MyString
+  brands: one
+  categories: one
+
+two:
+  title: MyString
+  model_no: MyString
+  price: 1.5
+  description: MyText
+  power: MyString
+  capacity: MyString
+  voltage: MyString
+  brands: two
+  categories: two

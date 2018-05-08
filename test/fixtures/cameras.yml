@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  resolution: MyString
+  model_no: MyString
+  storage_type: MyString
+  mega_pixel: MyString
+  display_size: MyString
+  battery: MyString
+  description: MyText
+  weight: MyString
+  price: 1.5
+  brands: one
+  categories: one
+
+two:
+  title: MyString
+  resolution: MyString
+  model_no: MyString
+  storage_type: MyString
+  mega_pixel: MyString
+  display_size: MyString
+  battery: MyString
+  description: MyText
+  weight: MyString
+  price: 1.5
+  brands: two
+  categories: two
